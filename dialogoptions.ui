@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogOptions</class>
+ <widget class="QDialog" name="DialogOptions">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>585</width>
+    <height>359</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>585</width>
+    <height>304</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>XNVU Options</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+}
+
+QLabel
+{
+	color: rgb(107, 239, 0);
+}
+
+QPushButton
+{
+	background-color: rgb(73, 163, 0);
+	color: rgb(0, 0, 0);
+}
+
+QComboBox
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+	border: 1px solid;
+	border-color: rgb(73, 163, 0);
+	selection-background-color: rgb(107, 239, 0);
+    selection-color: rgb(0, 0, 0);
+}
+
+QComboBox QAbstractItemView
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+	border: 1px solid;
+	border-color: rgb(73, 163, 0);
+}
+
+QLineEdit
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+	border: 1px solid;
+	border-color: rgb(73, 163, 0);
+}
+
+QSpinBox, QDateEdit
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+	border: 1px solid;
+	border-color: rgb(73, 163, 0);
+}
+
+QDoubleSpinBox
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+	border: 1px solid;
+	border-color: rgb(73, 163, 0);
+}
+
+QCheckBox
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+}
+
+QCheckBox::indicator::checked
+{
+	background-color: rgb(107, 239, 0);
+	color: rgb(107, 239, 0);
+	border: 1px solid;
+	border-color: rgb(73, 163, 0);
+}
+
+QCheckBox::indicator::unchecked
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+	border: 1px solid;
+	border-color: rgb(73, 163, 0);
+}
+
+QMenu
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+}
+
+QMenu::item:selected
+{
+	background-color: rgb(107, 239, 0);
+	color: rgb(0, 0, 0);
+}
+
+QMenu::item:disabled
+{
+	background-color: rgb(0, 15, 0);
+	color: rgb(27, 159, 0);;
+}
+</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>320</y>
+     <width>341</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBoxDistance">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>260</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="maximum">
+    <number>1000000</number>
+   </property>
+   <property name="value">
+    <number>500</number>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_FMS">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>230</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="text">
+    <string>FMS align</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>120</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Waypoint alignment</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>150</y>
+     <width>561</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Set XNVU to automatically convert waypoints in flightplan to the ones
+found in X-Plane database.
+Select FMS and/or XWP flightplans to convert, and which distance margin
+to allow for conversion:
+</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_WPS">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>260</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="text">
+    <string>XWP align</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>237</y>
+     <width>401</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Distance margin (recommended 500 m)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Meter">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>260</y>
+     <width>301</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>meters</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>361</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Date settings</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxCustomDate">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Enable custom date at startup</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="dateEdit">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>70</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="date">
+    <date>
+     <year>2020</year>
+     <month>1</month>
+     <day>1</day>
+    </date>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>541</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>7</pointsize>
+     <italic>true</italic>
+    </font>
+   </property>
+   <property name="text">
+    <string>NOTE: It seems X-Plane is running with a magnetic declination date
+of 2020-01-01. Currently this is the recommend date of setting.</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>DialogOptions</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>DialogOptions</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

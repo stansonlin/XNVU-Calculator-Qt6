@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogWPSEdit</class>
+ <widget class="QDialog" name="DialogWPSEdit">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1095</width>
+    <height>469</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>XNVU Library</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+}
+
+#frameDescription
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+	border: 1px solid;
+	border-color: rgb(73, 163, 0);
+}
+
+
+QLabel
+{
+	color: rgb(107, 239, 0);
+}
+
+#listWPS
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+
+	border: 1px solid;
+	border-color: rgb(73, 163, 0);
+}
+
+#listWPS::item:selected
+{
+	background-color: rgb(107, 239, 0);
+	color: rgb(0, 30, 0);
+}
+
+QPushButton
+{
+	background-color: rgb(73, 163, 0);
+	color: rgb(0, 0, 0);
+}
+
+QComboBox
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+	border: 1px solid;
+	border-color: rgb(73, 163, 0);
+	selection-background-color: rgb(107, 239, 0);
+    selection-color: rgb(0, 0, 0);
+}
+
+QComboBox QAbstractItemView
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+	border: 1px solid;
+	border-color: rgb(73, 163, 0);
+}
+
+QLineEdit
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+	border: 1px solid;
+	border-color: rgb(73, 163, 0);
+}
+
+QSpinBox
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+	border: 1px solid;
+	border-color: rgb(73, 163, 0);
+}
+
+QDoubleSpinBox
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+	border: 1px solid;
+	border-color: rgb(73, 163, 0);
+}
+
+QCheckBox
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+}
+
+QCheckBox::indicator::checked
+{
+	background-color: rgb(107, 239, 0);
+	color: rgb(107, 239, 0);
+	border: 1px solid;
+	border-color: rgb(73, 163, 0);
+}
+
+QCheckBox::indicator::unchecked
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+	border: 1px solid;
+	border-color: rgb(73, 163, 0);
+}
+
+QMenu
+{
+	background-color: rgb(0, 30, 0);
+	color: rgb(107, 239, 0);
+}
+
+QMenu::item:selected
+{
+	background-color: rgb(107, 239, 0);
+	color: rgb(0, 0, 0);
+}
+
+QMenu::item:disabled
+{
+	background-color: rgb(0, 15, 0);
+	color: rgb(27, 159, 0);;
+}
+</string>
+  </property>
+  <widget class="QListWidget" name="listWPS">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>561</width>
+     <height>441</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QFrameClickable" name="frameDescription">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>20</y>
+     <width>502</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>200</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>200</height>
+    </size>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="labelWPType">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>40</y>
+      <width>501</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>TeX Gyre Schola</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelIWPName2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>70</y>
+      <width>501</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>1</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>TeX Gyre Schola</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelWPLatlon">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>100</y>
+      <width>501</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>1</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>TeX Gyre Schola</family>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelWPNote">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>170</y>
+      <width>501</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>TeX Gyre Schola</family>
+      <pointsize>9</pointsize>
+      <weight>50</weight>
+      <italic>true</italic>
+      <bold>false</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelWPMagVar">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>140</y>
+      <width>502</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>1</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>TeX Gyre Schola</family>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelWPType2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>491</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Edit">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>230</y>
+     <width>96</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit...</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Delete">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>230</y>
+     <width>96</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_CreateNew">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>230</y>
+     <width>121</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Create new...</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>430</y>
+     <width>96</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QFrameClickable</class>
+   <extends>QFrame</extends>
+   <header>qframeclickable.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
